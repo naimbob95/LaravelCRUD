@@ -14,7 +14,7 @@ class ContactController extends Controller
     public function index()
     {
        $contacts = Contact::all();
-       return view('contact.index',compact('contacts'));
+       return view('contacts.index',compact('contacts'));
 
     }
 
@@ -39,10 +39,10 @@ class ContactController extends Controller
     {
         $request->validate([
             'first_name'=> 'required',
-            'last name' => 'required',
+            'last_name' => 'required',
             'email' => 'required'
         ]);
-        $contact = new Contact([
+        $contacts = new Contact([
             'first_name' => $request->get('first_name'),
             'last_name' => $request->get('last_name'),
             'email' => $request->get('email'),
@@ -50,7 +50,7 @@ class ContactController extends Controller
             'city' => $request->get('city'),
             'country' => $request->get('country')
         ]);
-        $contact->save();
+        $contacts->save();
         return redirect('/contacts')->with('success','Contact Saved!');
     }
 
@@ -86,7 +86,22 @@ class ContactController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'first_name'=>'required',
+            'last_name'=>'required',
+            'email'=>'required'
+        ]);
+
+        $contact = Contact::find($id);
+        $contact->first_name =  $request->get('first_name');
+        $contact->last_name = $request->get('last_name');
+        $contact->email = $request->get('email');
+        $contact->job_title = $request->get('job_title');
+        $contact->city = $request->get('city');
+        $contact->country = $request->get('country');
+        $contact->save();
+
+        return redirect('/contacts')->with('success', 'Contact updated!');
     }
 
     /**
@@ -97,6 +112,9 @@ class ContactController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $contact = Contact::find($id);
+        $contact->delete();
+
+        return redirect('/contacts')->with('success', 'Contact deleted!');
     }
 }
