@@ -11,3 +11,13 @@
 
 This project are a tutorial project of the basic functionality which is Create,Update,Read and Delete (CRUD).
 
+## How to use this project
+
+1)Clone this project to your computer.
+2)Run composer update" command.
+3)Edit the .env file with database information and credentials.
+4)Run the "php artisan migrate" command.
+5)Run the "php artisan serve" command.
+
+
+
