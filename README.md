@@ -7,4 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## About This Project
+
+This project are a tutorial project of the basic functionality which is Create,Update,Read and Delete (CRUD).
+
