@@ -13,7 +13,7 @@ This project are a tutorial project of the basic functionality which is Create,U
 
 ## How to use this project
 
-1)Clone this project to your computer.
+<p>1)Clone this project to your computer.</p>
 2)Run composer update" command.
 3)Edit the .env file with database information and credentials.
 4)Run the "php artisan migrate" command.
