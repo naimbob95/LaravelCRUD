@@ -9,7 +9,7 @@
 
 ## About This Project
 
-This project are a tutorial project of the basic functionality which is Create,Update,Read and Delete (CRUD).
+This is tutorial project of the basic functionality which is Create,Read,Update and Delete (CRUD).
 
 ## How to use this project
 
