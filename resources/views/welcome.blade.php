@@ -83,7 +83,7 @@
                 <div class="title m-b-md">
 
 
-                    <a href="{{ url('/contacts') }}">Home</a>
+                    <a>Welcome</a>
                 </div>
 
 
