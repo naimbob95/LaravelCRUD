@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app') --}}
 @extends('base')
 
 @section('main')
@@ -52,6 +52,7 @@
         @endforeach
     </tbody>
   </table>
+
 <div>
 </div>
 @endsection
